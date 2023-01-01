@@ -1,0 +1,120 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Montana</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/montana/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/montana/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/montana/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/montana/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/montana/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/montana/css/themify-icons.css">
+    <link rel="stylesheet" href="~/montana/css/nice-select.css">
+    <link rel="stylesheet" href="~/montana/css/flaticon.css">
+    <link rel="stylesheet" href="~/montana/css/gijgo.css">
+    <link rel="stylesheet" href="~/montana/css/animate.css">
+    <link rel="stylesheet" href="~/montana/css/slicknav.css">
+    <link rel="stylesheet" href="~/montana/css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="/Anasayfa/Index">
+                                    <img src="~/montana/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/Home/anasayfa">ANASAYFA</a></li>
+                                        <li><a href="/Home/duyuru">DUYURU BİLGİLERİ</a></li>
+                                        <li><a href="/Home/iletisim">İLETİŞİM BİLGİLERİ</a></li>
+                                        <li><a href="/Home/kullanici">KULLANICI BİLGİLERİ</a></li>
+                                        <li><a href="/Home/yemek">CATRİNG</a></li>
+                                        <li><a href="/Home/mekanlar">MEKANLAR</a></li>
+                                        <li><a href="/Home/sanatcilar">SANATÇILAR</a></li>
+
+
+
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/montana/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="~/montana/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/montana/js/popper.min.js"></script>
+    <script src="~/montana/js/bootstrap.min.js"></script>
+    <script src="~/montana/js/owl.carousel.min.js"></script>
+    <script src="~/montana/js/isotope.pkgd.min.js"></script>
+    <script src="~/montana/js/ajax-form.js"></script>
+    <script src="~/montana/js/waypoints.min.js"></script>
+    <script src="~/montana/js/jquery.counterup.min.js"></script>
+    <script src="~/montana/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/montana/js/scrollIt.js"></script>
+    <script src="~/montana/js/jquery.scrollUp.min.js"></script>
+    <script src="~/montana/js/wow.min.js"></script>
+    <script src="~/montana/js/nice-select.min.js"></script>
+    <script src="~/montana/js/jquery.slicknav.min.js"></script>
+    <script src="~/montana/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/montana/js/plugins.js"></script>
+    <script src="~/montana/js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="~/montana/js/contact.js"></script>
+    <script src="~/montana/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/montana/js/jquery.form.js"></script>
+    <script src="~/montana/js/jquery.validate.min.js"></script>
+    <script src="~/montana/js/mail-script.js"></script>
+    <script src="~/montana/js/main.js"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+
+        });
+    </script>
+
+</body>
+</html>

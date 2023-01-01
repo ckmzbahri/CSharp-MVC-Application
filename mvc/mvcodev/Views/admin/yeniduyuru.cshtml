@@ -1,0 +1,22 @@
+﻿@model mvcodev.Models.Data.duyurular
+@{
+    ViewBag.Title = "yeniduyuru";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<form class="form-group " action="/admin/yeniduyuru" enctype="multipart/form-data" method="post">
+    <div>
+        <label>BAŞLIK</label>
+        <input type="text" class="form-control" name="baslik"/>
+        @Html.ValidationMessageFor(m => m.baslik, "", new { @style = "color-red" })
+        <label>İÇERİK</label>
+        <input type="text" class="form-control" name="icerik" />
+        @Html.ValidationMessageFor(m => m.icerik, "", new { @style = "color-red" })
+        <label>DUYURU FOTOĞRAFI</label>
+        <input type="file" name="uploadfile" id="uploadfile" /> <br />
+     
+        <div style="margin-top:30px">
+            <button class="btn btn-info">Duyuru Ekle </button>
+        </div>
+    </div>
+</form>

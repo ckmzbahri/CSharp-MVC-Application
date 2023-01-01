@@ -1,0 +1,80 @@
+﻿@using mvcodev.Models.Data
+@model List<sanatcilar>
+
+@{
+    ViewBag.Title = "rezervasyonyap1";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+@*<table class="table table-bordered">
+        <tr>
+
+            <th> MENÜ ADI</th>
+            <th> MENÜ İÇERİĞİ</th>
+            <th> MENÜ FİYATI</th>
+            <th> MENÜ FOTOĞRAFI</th>
+
+        </tr>
+
+        <tbody>
+            @foreach (var mama in Model)
+                {
+                <tr>
+
+                    <td>@mama.menu_adi</td>
+                    <td>@mama.menu_icerik</td>
+                    <td>@mama.menu_fiyat</td>
+                    <td>@mama.menu_fotograf</td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>*@
+<div class="offers_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                    <span>Our Offers</span>
+                    <h3>Ongoing Offers</h3>
+                </div>
+            </div>
+        </div>
+        @foreach (var i in Model)
+            {
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <br />
+                        <div class="about_thumb">
+                            <img src="~/Content/images/@i.sanatci_fotograf" alt="">
+                        </div>
+                        <h3>
+                            @i.sanatci_ad
+
+                        </h3>
+                        <ul>
+                            <li>MÜZİK TÜRÜ: @i.sanatci_muzik</li>
+                            <li>SANATÇININ YAŞI: @i.sanatci_yas</li>
+                            <li>SANATÇININ ÜCRETİ: @i.sanatci_ücret</li>
+                            <li>CİNSİYET: @i.sanatci_cinsiyet</li>
+                            <br />
+                        </ul>
+
+                        <a href="/UyeMenu/rezervasyonyap2/@i.sanatci_id" class="btn btn-primary">SEÇ</a>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+<br />
+<br />
+<a href="/UyeMenu/anasayfa/" class="btn btn-primary">İPTAL</a>
+<a href="/UyeMenu/rezervasyonyap/" class="btn btn-primary">MEKAN SEÇİMİNE GERİ DÖN</a>
+
+
+
+

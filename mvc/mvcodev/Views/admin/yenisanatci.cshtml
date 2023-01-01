@@ -1,0 +1,50 @@
+﻿@model mvcodev.Models.Data.sanatcilar
+@{
+    ViewBag.Title = "yenisanatci";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<form class="form-group " action="/admin/yenisanatci" enctype="multipart/form-data" method="post">
+    <div>
+        <label>SANATÇI TC</label>
+        <input type="text" class="form-control" name="sanatci_tc" />
+        @Html.ValidationMessageFor(m => m.sanatci_tc, "", new { @style = "color-red" })
+        <label>SANATÇI ADI</label>
+        <input type="text" class="form-control" name="sanatci_ad" />
+        @Html.ValidationMessageFor(m => m.sanatci_ad, "", new { @style = "color-red" })
+        <label>MÜZİK TÜRÜ</label>
+        <input type="text" class="form-control" name="sanatci_muzik" />
+        @Html.ValidationMessageFor(m => m.sanatci_muzik, "", new { @style = "color-red" })
+        <label>TELEFON</label>
+        <input type="text" class="form-control" name="sanatci_telefon" />
+        @Html.ValidationMessageFor(m => m.sanatci_telefon, "", new { @style = "color-red" })
+        <label>MAİL</label>
+        <input type="text" class="form-control" name="sanatci_mail" />
+        @Html.ValidationMessageFor(m => m.sanatci_mail, "", new { @style = "color-red" })
+        <label>SANATÇI YAŞI</label>
+        <input type="text" class="form-control" name="sanatci_yas" />
+        @Html.ValidationMessageFor(m => m.sanatci_yas, "", new { @style = "color-red" })
+        <label>ÜCRET</label>
+        <input type="text" class="form-control" name="sanatci_ücret" />
+        @Html.ValidationMessageFor(m => m.sanatci_ücret, "", new { @style = "color-red" })
+        <label>ÖN GÖSTERİM</label>
+        <input type="text" class="form-control" name="sanatci_video" />
+        @Html.ValidationMessageFor(m => m.sanatci_video, "", new { @style = "color-red" })
+        <label>CİNSİYET</label>
+        <input type="text" class="form-control" name="sanatci_cinsiyet" />
+        @Html.ValidationMessageFor(m => m.sanatci_cinsiyet, "", new { @style = "color-red" }) <br />
+        <label>SANATÇI FOTOĞRAFI</label>
+        <input type="file" name="uploadfile" id="uploadfile"/> <br />
+      
+       
+      
+      
+     
+     
+     
+     
+        <div style="margin-top:30px">
+            <button class="btn btn-info">SANATÇI EKLE </button>
+        </div>
+    </div>
+</form>

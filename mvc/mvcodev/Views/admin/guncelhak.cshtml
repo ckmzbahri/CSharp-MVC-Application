@@ -1,0 +1,29 @@
+﻿@model mvcodev.Models.Data.hakkimizda
+@{
+    ViewBag.Title = "guncelhak";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+@using (Html.BeginForm("Guncellehak", "admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label>ID </label>
+            @Html.TextBoxFor(m => m.metin_id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.metin_id, "", new { @style = "color-red" })
+        </div><br />
+        <br />
+
+        <label>HAKKIMIZDA İÇERİĞİ </label>
+        @Html.TextBoxFor(m => m.metin, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.metin, "", new { @style = "color-red" })<br />
+        <br />
+
+    </div>
+        <div>
+            <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+        </div>
+}
+
+

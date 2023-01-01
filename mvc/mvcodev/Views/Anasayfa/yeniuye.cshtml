@@ -1,0 +1,38 @@
+﻿@model mvcodev.Models.Data.uyebilgi
+@{
+    ViewBag.Title = "yeniuye";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>ÜYENİN ADI</label>
+        <input type="text" class="form-control" name="üye_adi" />
+        @Html.ValidationMessageFor(m => m.üye_adi, "", new { @style = "color-red" })<br />
+        <label>ÜYENİN SOYADI</label>
+        <input type="text" class="form-control" name="üye_soyadi" />
+        @Html.ValidationMessageFor(m => m.üye_soyadi, "", new { @style = "color-red" })<br />
+        <label>MAİL ADRESİ</label>
+        <input type="text" class="form-control" name="mail" />
+        @Html.ValidationMessageFor(m => m.mail, "", new { @style = "color-red" })<br />
+        <label>TARİH</label>
+        <br />
+        <input type="datetime"  class="datetimepicker" name="tarih"/>
+        @Html.ValidationMessageFor(m => m.tarih, "", new { @style = "color-red" })<br />
+        <br />
+        <label>CİNSİYET</label>
+        <input type="text" class="form-control" name="cinsiyet" />
+        @Html.ValidationMessageFor(m => m.cinsiyet, "", new { @style = "color-red" })<br />
+        <label>KULLANICI ADI</label>
+        <input type="text" class="form-control" name="kullanici_adi" />
+        @Html.ValidationMessageFor(m => m.kullanici_adi, "", new { @style = "color-red" })<br />
+        <label>ŞİFRE</label>
+        <input type="text" class="form-control" name="sifre" />
+        @Html.ValidationMessageFor(m => m.sifre, "", new { @style = "color-red" })<br />
+        <label>ŞİFRE TEKRAR</label>
+        <input type="text" class="form-control" />
+        <div style="margin-top:30px">
+            <button class="btn btn-info">KAYIT OL </button>
+        </div>
+    </div>
+</form>

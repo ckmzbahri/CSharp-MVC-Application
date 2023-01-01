@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mvcveriModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="adminsayfalar">
+    <Key>
+      <PropertyRef Name="sayfa_id" />
+    </Key>
+    <Property Name="sayfa_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sayfa_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sayfa_link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="duyurular">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="hakkimizda">
+    <Key>
+      <PropertyRef Name="metin_id" />
+    </Key>
+    <Property Name="metin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="metin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="iletisim">
+    <Key>
+      <PropertyRef Name="mesaj_id" />
+    </Key>
+    <Property Name="mesaj_id" Type="Int32" Nullable="false" />
+    <Property Name="ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="konu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="kullanici">
+    <Key>
+      <PropertyRef Name="kullanici_id" />
+    </Key>
+    <Property Name="kullanici_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanici_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_soyadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_girisadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kullanici_girissifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mekan">
+    <Key>
+      <PropertyRef Name="mekan_id" />
+    </Key>
+    <Property Name="mekan_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mekan_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mekan_adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kapasite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mekan_foto1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mekan_foto2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mekan_foto3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mekan_ucret" Type="Int32" />
+    <NavigationProperty Name="rezervasyon" Relationship="Self.FK_rezervasyon_mekan" FromRole="mekan" ToRole="rezervasyon" />
+  </EntityType>
+  <EntityType Name="resimler">
+    <Key>
+      <PropertyRef Name="resim_id" />
+    </Key>
+    <Property Name="resim_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rezervasyon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mekan_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mekan_adresi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kapasite" Type="Int32" />
+    <Property Name="mekan_ucret" Type="Int32" />
+    <Property Name="sanatci_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_tur" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_yas" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_ucret" Type="Int32" />
+    <Property Name="menu_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="menu_icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="menu_fiyat" Type="Int32" />
+    <Property Name="tarih" Type="Int32" />
+    <Property Name="davetli" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="toplam_fiyat" Type="Int32" />
+    <Property Name="kullanici_detay" Type="Int32" />
+    <Property Name="mekan_id" Type="Int32" />
+    <Property Name="menu_id" Type="Int32" />
+    <Property Name="sanatci_id" Type="Int32" />
+    <NavigationProperty Name="mekan" Relationship="Self.FK_rezervasyon_mekan" FromRole="rezervasyon" ToRole="mekan" />
+    <NavigationProperty Name="sanatcilar" Relationship="Self.FK_rezervasyon_sanatcilar" FromRole="rezervasyon" ToRole="sanatcilar" />
+    <NavigationProperty Name="yemekler" Relationship="Self.FK_rezervasyon_yemekler" FromRole="rezervasyon" ToRole="yemekler" />
+  </EntityType>
+  <EntityType Name="sanatcilar">
+    <Key>
+      <PropertyRef Name="sanatci_id" />
+    </Key>
+    <Property Name="sanatci_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sanatci_tc" Type="Int32" />
+    <Property Name="sanatci_ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_muzik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_telefon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_yas" Type="Int32" />
+    <Property Name="sanatci_ücret" Type="Int32" />
+    <Property Name="sanatci_video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sanatci_cinsiyet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="sanatci_fotograf" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="rezervasyon" Relationship="Self.FK_rezervasyon_sanatcilar" FromRole="sanatcilar" ToRole="rezervasyon" />
+  </EntityType>
+  <EntityType Name="sayfa">
+    <Key>
+      <PropertyRef Name="sayfa_id" />
+    </Key>
+    <Property Name="sayfa_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sayfa_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sayfa_link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="uyebilgi">
+    <Key>
+      <PropertyRef Name="üye_id" />
+    </Key>
+    <Property Name="üye_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="üye_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="üye_soyadi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tarih" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cinsiyet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="kullanici_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="uyesayfa">
+    <Key>
+      <PropertyRef Name="sayfa_id" />
+    </Key>
+    <Property Name="sayfa_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sayfa_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sayfa_link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="yemekler">
+    <Key>
+      <PropertyRef Name="menu_id" />
+    </Key>
+    <Property Name="menu_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="menu_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="menu_icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="menu_fiyat" Type="Int32" />
+    <Property Name="menu_fotograf" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="rezervasyon" Relationship="Self.FK_rezervasyon_yemekler" FromRole="yemekler" ToRole="rezervasyon" />
+  </EntityType>
+  <Association Name="FK_rezervasyon_mekan">
+    <End Role="mekan" Type="Self.mekan" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rezervasyon" Type="Self.rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mekan">
+        <PropertyRef Name="mekan_id" />
+      </Principal>
+      <Dependent Role="rezervasyon">
+        <PropertyRef Name="mekan_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervasyon_sanatcilar">
+    <End Role="sanatcilar" Type="Self.sanatcilar" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rezervasyon" Type="Self.rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanatcilar">
+        <PropertyRef Name="sanatci_id" />
+      </Principal>
+      <Dependent Role="rezervasyon">
+        <PropertyRef Name="sanatci_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rezervasyon_yemekler">
+    <End Role="yemekler" Type="Self.yemekler" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rezervasyon" Type="Self.rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="yemekler">
+        <PropertyRef Name="menu_id" />
+      </Principal>
+      <Dependent Role="rezervasyon">
+        <PropertyRef Name="menu_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="mvcveriEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="adminsayfalar" EntityType="Self.adminsayfalar" />
+    <EntitySet Name="duyurular" EntityType="Self.duyurular" />
+    <EntitySet Name="hakkimizda" EntityType="Self.hakkimizda" />
+    <EntitySet Name="iletisim" EntityType="Self.iletisim" />
+    <EntitySet Name="kullanici" EntityType="Self.kullanici" />
+    <EntitySet Name="mekan" EntityType="Self.mekan" />
+    <EntitySet Name="resimler" EntityType="Self.resimler" />
+    <EntitySet Name="rezervasyon" EntityType="Self.rezervasyon" />
+    <EntitySet Name="sanatcilar" EntityType="Self.sanatcilar" />
+    <EntitySet Name="sayfa" EntityType="Self.sayfa" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="uyebilgi" EntityType="Self.uyebilgi" />
+    <EntitySet Name="uyesayfa" EntityType="Self.uyesayfa" />
+    <EntitySet Name="yemekler" EntityType="Self.yemekler" />
+    <AssociationSet Name="FK_rezervasyon_mekan" Association="Self.FK_rezervasyon_mekan">
+      <End Role="mekan" EntitySet="mekan" />
+      <End Role="rezervasyon" EntitySet="rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervasyon_sanatcilar" Association="Self.FK_rezervasyon_sanatcilar">
+      <End Role="sanatcilar" EntitySet="sanatcilar" />
+      <End Role="rezervasyon" EntitySet="rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rezervasyon_yemekler" Association="Self.FK_rezervasyon_yemekler">
+      <End Role="yemekler" EntitySet="yemekler" />
+      <End Role="rezervasyon" EntitySet="rezervasyon" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

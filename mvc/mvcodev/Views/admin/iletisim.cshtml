@@ -1,0 +1,34 @@
+﻿@using mvcodev.Models.Data
+@model List<iletisim>
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> MESAJ İD</th>
+        <th> ADI</th>
+        <th> İLETİŞİM</th>
+        <th> NE VARDI</th> 
+        <th> SİL </th>
+    </tr>
+
+    <tbody>
+        @foreach (var mesaj in Model)
+        {
+            <tr>
+                <td>@mesaj.mesaj_id</td>
+                <td>@mesaj.ad</td>
+                <td>@mesaj.mail</td>
+                <td>@mesaj.konu</td>
+                <td>
+                    <a href="/admin/iletSIL/@mesaj.mesaj_id" class=" btn btn-danger">SİL</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

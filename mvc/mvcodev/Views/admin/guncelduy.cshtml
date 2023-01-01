@@ -1,0 +1,35 @@
+﻿@model mvcodev.Models.Data.duyurular
+@{
+    ViewBag.Title = "guncelduy";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+@using (Html.BeginForm("Guncelleduy", "admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label>DUYURU ID </label>
+            @Html.TextBoxFor(m => m.id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.id, "", new { @style = "color-red" })
+        </div><br />
+        <br />
+        <label>DUYURU BAŞLIĞI </label>
+        @Html.TextBoxFor(m => m.baslik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.baslik, "", new { @style = "color-red" })<br />
+        <br />
+        <label>DUYURU İÇERİĞİ </label>
+        @Html.TextBoxFor(m => m.icerik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.icerik, "", new { @style = "color-red" })<br />
+
+        <br />
+        <label>DUYURU FOTOĞRAFI </label>
+
+        <img src="~/Content/images/@Session["resim"]" width="300" height="300" /> <br />
+    </div>
+
+        <div>
+            <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+        </div>
+}
+

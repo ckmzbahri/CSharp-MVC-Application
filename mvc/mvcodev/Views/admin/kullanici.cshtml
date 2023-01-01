@@ -1,0 +1,38 @@
+﻿@using mvcodev.Models.Data
+
+@{
+    ViewBag.Title = "kullanici";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+<table class="table table-bordered">
+            <tr>
+                <th> KULLANICI İD</th>
+                <th> ADI</th>
+                <th> SOYADI</th>
+                <th> KULLANICI ADI</th>
+                <th> ŞİFRE</th>
+                <th> SİL/GÜNCELLE </th>
+            </tr>
+
+            <tbody>
+                @foreach (var admin in Model)
+                {
+                    if (int.Parse(Session["kullanici_id"].ToString()) == admin.kullanici_id)
+                    {
+                    <tr>
+                        <td>@admin.kullanici_id</td>
+                        <td>@admin.kullanici_adi</td>
+                        <td>@admin.kullanici_soyadi</td>
+                        <td>@admin.kullanici_girisadi</td>
+                        <td>@admin.kullanici_girissifre</td>
+                        <td>
+                            <a href="/admin/adminSIL/@admin.kullanici_id" class=" btn btn-danger">SİL</a>
+                            <a href="/admin/gunceladmin/@admin.kullanici_id" class=" btn btn-success">GÜNCELLE</a>
+                        </td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+<a href="/admin/yenikullanici/" class="btn btn-primary">YENİ ADMİN EKLE</a>
+

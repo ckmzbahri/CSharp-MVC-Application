@@ -1,0 +1,28 @@
+﻿@model mvcodev.Models.Data.yemekler
+@{
+    ViewBag.Title = "yeniyemek";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+
+
+
+<form class="form-group "  action="/admin/yeniyemek" enctype="multipart/form-data" method="post">
+    <div>
+        <label>MENÜ ADI</label>
+        <input type="text" class="form-control" name="menu_adi" />
+        @Html.ValidationMessageFor(m => m.menu_adi, "", new { @style = "color-red" })
+        <label>MENÜ İÇERİĞİ</label>
+        <input type="text" class="form-control" name="menu_icerik" />
+        @Html.ValidationMessageFor(m => m.menu_icerik, "", new { @style = "color-red" })
+        <label>MENÜ FİYATI</label>
+        <input type="text" class="form-control" name="menu_fiyat" />
+        @Html.ValidationMessageFor(m => m.menu_fiyat, "", new { @style = "color-red" })
+        <label>MENÜ FOTOĞRAFI</label>
+        <input type="file" name="uploadfile" id="uploadfile" /> <br /> 
+        <div style="margin-top:30px">
+            <button class="btn btn-info">MENÜ Ekle </button>
+        </div>
+    </div>
+</form>
+

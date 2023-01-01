@@ -1,0 +1,126 @@
+﻿@using mvcodev.Models.Data;
+
+@{
+    ViewBag.Title = "rzvtut";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+
+@{mvcveriEntities5 db = new mvcveriEntities5(); }
+
+
+
+
+@foreach (var i in db.mekan)
+{
+    if (int.Parse(Session["mekanid"].ToString()) == i.mekan_id)
+    {
+        <table class="table table-bordered">
+            <tr>
+
+                <th> MEKAN ADI</th>
+                <th> MEKAN ADRES</th>
+                <th> MEKAN KAPASİTE</th>
+                <th>FİYAT</th>
+
+            </tr>
+
+            <tbody>
+
+                <tr>
+                    <td>@i.mekan_adi</td>
+                    <td>@i.mekan_adres</td>
+                    <td>@i.kapasite</td>
+                    <td>@i.mekan_ucret</td>
+                </tr>
+
+            </tbody>
+        </table>
+    }
+}
+@foreach (
+                var i in db.sanatcilar)
+{
+    if (int.Parse(Session["sanatciid"].ToString()) == i.sanatci_id)
+    {
+        <table class="table table-bordered">
+            <tr>
+
+                <th> SANATÇI ADI</th>
+                <th> MÜZİK TÜRÜ</th>
+                <th> CİNSİYET</th>
+                <th>KONSER BEDELİ</th>
+
+            </tr>
+
+            <tbody>
+
+                <tr>
+                    <td>@i.sanatci_ad</td>
+                    <td>@i.sanatci_muzik</td>
+                    <td>@i.sanatci_cinsiyet</td>
+                    <td>@i.sanatci_ücret</td>
+                </tr>
+
+            </tbody>
+        </table>
+        @*@using (Html.BeginForm("getSanatciucret", "UyeMenu"))
+        {
+            <input type="text" name="sanatciUcret" value="@i.sanatci_ücret"/> <br />
+        }*@
+    }
+}
+
+@foreach (var i in db.yemekler)
+{
+    if (int.Parse(Session["yemekid"].ToString()) == i.menu_id)
+    {
+        <table class="table table-bordered">
+            <tr>
+
+                <th> MENÜ ADI</th>
+                <th> MENÜ İÇERİĞİ</th>
+                <th> MENÜ FİYATI</th>
+
+
+            </tr>
+
+            <tbody>
+
+                <tr>
+                    <td>@i.menu_adi</td>
+                    <td>@i.menu_icerik</td>
+                    <td>@i.menu_fiyat</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    }
+}
+
+<form class="form-group " method="post">    
+    <div>
+        <label>DAVETLİ SAYISI</label>
+        <input type="text" class="form-control" name="davetli" />
+        <label>TARİH</label>
+     <input type="date" class="form-control" name="tarih" id="inputName" required>
+        <label >TARİH SEÇİMİNİ (GGAAYY) ŞEKLİNDE YAZINIZ </label>
+        @*<label>NET FİYAT</label>
+        <input type="text" class="form-control" name="toplam_fiyat" />
+        <a href="/UyeMenu/rzvhesap" class="btn btn-success">ÜCRET HESAPLA</a>*@
+        <br />
+        <br />
+        <div style="margin-top:30px">
+            <button class="btn btn-info">Rezervasyon Yap </button>
+        </div>
+
+
+
+        @*sanatcı id @Session["kullanici_adi"]*@
+        @*mekan id @Session["mekanid"]
+        sanatcı id @Session["sanatciid"]
+        yemek id @Session["yemekid"]*@
+    </div>
+</form>
+

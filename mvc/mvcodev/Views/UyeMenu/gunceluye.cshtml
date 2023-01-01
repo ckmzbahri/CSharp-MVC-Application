@@ -1,0 +1,47 @@
+﻿@model mvcodev.Models.Data.uyebilgi
+@{
+    ViewBag.Title = "gunceluye";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+@using (Html.BeginForm("Guncelleuye", "UyeMenu", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label> ÜYE İD </label>
+            @Html.TextBoxFor(m => m.üye_id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.üye_id, "", new { @style = "color-red" })
+        </div><br />
+        <br />
+        <label> ADI </label>
+        @Html.TextBoxFor(m => m.üye_adi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.üye_adi, "", new { @style = "color-red" })<br />
+        <br />
+        <label>SOYADI </label>
+        @Html.TextBoxFor(m => m.üye_soyadi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.üye_soyadi, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MAİL</label>
+        @Html.TextBoxFor(m => m.mail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.mail, "", new { @style = "color-red" })<br />
+        <br />
+        <label>CİNSİYET</label>
+        @Html.TextBoxFor(m => m.cinsiyet, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.cinsiyet, "", new { @style = "color-red" })<br />
+        <br />
+        <label>KULLANICI ADI </label>
+        @Html.TextBoxFor(m => m.kullanici_adi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.kullanici_adi, "", new { @style = "color-red" })<br />
+        <br />
+        <label>ŞİFRE </label>
+        @Html.TextBoxFor(m => m.sifre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sifre, "", new { @style = "color-red" })<br />
+        <br />
+    </div>
+
+        <div>
+            <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+        </div>
+}
+

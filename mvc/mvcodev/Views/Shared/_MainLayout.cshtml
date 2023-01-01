@@ -1,0 +1,332 @@
+﻿@using mvcodev.Models.Data
+
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Montana</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/montana/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="~/montana/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/montana/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/montana/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/montana/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/montana/css/themify-icons.css">
+    <link rel="stylesheet" href="~/montana/css/nice-select.css">
+    <link rel="stylesheet" href="~/montana/css/flaticon.css">
+    <link rel="stylesheet" href="~/montana/css/gijgo.css">
+    <link rel="stylesheet" href="~/montana/css/animate.css">
+    <link rel="stylesheet" href="~/montana/css/slicknav.css">
+    <link rel="stylesheet" href="~/montana/css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center no-gutters">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo-img">
+                                <a href="/Anasayfa/Index">
+                                    <img src="~/montana/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/Anasayfa/Index">ANASAYFA</a></li>
+                                        <li><a href="/Anasayfa/Hakkinda">HAKKINDA</a></li>
+                                        <li><a href="/Anasayfa/Mekanlar">MEKANLAR</a></li>
+                                        <li><a href="/Anasayfa/Sanatcilar">SANATÇILAR</a></li>
+                                        <li><a href="/Anasayfa/Catring">CATRİNG</a></li>
+                                        <li><a href="/Anasayfa/iletisim">İLETİŞİM</a></li>
+                                        <li><a href="/Anasayfa/duyurular">DUYURULAR</a></li>
+                                        <li>
+                                            <a href="#">GİRİŞ <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="/Anasayfa/Giris">ÜYE GİRİŞİ</a></li>
+                                                <li><a href="/Anasayfa/Yoneticigiris">YÖNETİCİ GİRİŞİ</a></li>
+                                            </ul>
+                                        </li>
+
+
+
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            @*<div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+            @{ mvcveriEntities5 db = new mvcveriEntities5();
+            var degerler = db.mekan.ToList();
+            }
+
+            @foreach (var i in degerler)
+            {
+            <img src="~/Content/images/@i.mekan_foto1" alt="">
+          
+            <img src="~/Content/images/@i.mekan_foto2" alt="">
+           
+            <img src="~/Content/images/@i.mekan_foto3" alt="">
+                
+                
+              
+
+            }
+            @*<div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single_slider  d-flex align-items-center justify-content-center slider_bg_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="slider_text text-center">
+                                <h3>Life is Beautiful</h3>
+                                <p>Unlock to enjoy the view of Martine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <!-- slider_area_end -->
+    <!-- video_area_start -->
+
+
+    <div class="features_room">
+
+        <div class="rooms_here">
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/montana/img/rooms/1.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+
+                        <a href="#" class="line-button">book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/montana/img/rooms/2.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+
+                        <a href="#" class="line-button">book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/montana/img/rooms/3.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+
+                        <a href="#" class="line-button">book now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single_rooms">
+                <div class="room_thumb">
+                    <img src="~/montana/img/rooms/4.png" alt="">
+                    <div class="room_heading d-flex justify-content-between align-items-center">
+
+                        <a href="#" class="line-button">book now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- features_room_end -->
+    <!-- forQuery_start -->
+
+    <div class="instragram_area">
+        <div class="single_instagram">
+            <img src="~/montana/img/instragram/1.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/montana/img/instragram/2.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/montana/img/instragram/3.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/montana/img/instragram/4.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="single_instagram">
+            <img src="~/montana/img/instragram/5.png" alt="">
+            <div class="ovrelay">
+                <a href="#">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- instragram_area_end -->
+    <!-- footer -->
+    <footer class="footer">
+
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- link that opens popup -->
+    <!-- form itself end-->
+    <form id="test-form" class="white-popup-block mfp-hide">
+        <div class="popup_box ">
+            <div class="popup_inner">
+                <h3>Check Availability</h3>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <input id="datepicker" placeholder="Check in date">
+                        </div>
+                        <div class="col-xl-6">
+                            <input id="datepicker2" placeholder="Check out date">
+                        </div>
+                        <div class="col-xl-6">
+                            <select class="form-select wide" id="default-select" class="">
+                                <option data-display="Adult">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-6">
+                            <select class="form-select wide" id="default-select" class="">
+                                <option data-display="Children">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <select class="form-select wide" id="default-select" class="">
+                                <option data-display="Room type">Room type</option>
+                                <option value="1">Laxaries Rooms</option>
+                                <option value="2">Deluxe Room</option>
+                                <option value="3">Signature Room</option>
+                                <option value="4">Couple Room</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="submit" class="boxed-btn3">Check Availability</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+    <!-- form itself end -->
+    <!-- JS here -->
+    <script src="~/montana/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="~/montana/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/montana/js/popper.min.js"></script>
+    <script src="~/montana/js/bootstrap.min.js"></script>
+    <script src="~/montana/js/owl.carousel.min.js"></script>
+    <script src="~/montana/js/isotope.pkgd.min.js"></script>
+    <script src="~/montana/js/ajax-form.js"></script>
+    <script src="~/montana/js/waypoints.min.js"></script>
+    <script src="~/montana/js/jquery.counterup.min.js"></script>
+    <script src="~/montana/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/montana/js/scrollIt.js"></script>
+    <script src="~/montana/js/jquery.scrollUp.min.js"></script>
+    <script src="~/montana/js/wow.min.js"></script>
+    <script src="~/montana/js/nice-select.min.js"></script>
+    <script src="~/montana/js/jquery.slicknav.min.js"></script>
+    <script src="~/montana/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/montana/js/plugins.js"></script>
+    <script src="~/montana/js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="~/montana/js/contact.js"></script>
+    <script src="~/montana/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/montana/js/jquery.form.js"></script>
+    <script src="~/montana/js/jquery.validate.min.js"></script>
+    <script src="~/montana/js/mail-script.js"></script>
+    <script src="~/montana/js/main.js"></script>
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+
+        });
+    </script>
+
+</body>
+</html>

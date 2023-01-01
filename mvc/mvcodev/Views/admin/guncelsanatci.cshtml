@@ -1,0 +1,59 @@
+﻿@model mvcodev.Models.Data.sanatcilar
+@{
+    ViewBag.Title = "guncelsanatci";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+@using (Html.BeginForm("Guncellesanatci", "admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label>SANATÇI ID </label>
+            @Html.TextBoxFor(m => m.sanatci_id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.sanatci_id, "", new { @style = "color-red" })
+        </div><br />
+        <br />
+        <label>SANATÇI TC </label>
+        @Html.TextBoxFor(m => m.sanatci_tc, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_tc, "", new { @style = "color-red" })<br />
+        <br />
+        <label>SANATÇI AD </label>
+        @Html.TextBoxFor(m => m.sanatci_ad, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_ad, "", new { @style = "color-red" })<br />
+        <br />
+        <label>SANATÇI MÜZİK TÜRÜ </label>
+        @Html.TextBoxFor(m => m.sanatci_muzik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_muzik, "", new { @style = "color-red" })<br />
+        <br />
+        <label>İLETİŞİM </label>
+        @Html.TextBoxFor(m => m.sanatci_telefon, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_telefon, "", new { @style = "color-red" })<br />
+        <br />
+        <label>İLETİŞİM </label>
+        @Html.TextBoxFor(m => m.sanatci_mail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_mail, "", new { @style = "color-red" })<br />
+        <br />
+        <label>YAŞ </label>
+        @Html.TextBoxFor(m => m.sanatci_yas, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_yas, "", new { @style = "color-red" })<br />
+        <br />
+        <label>ÜCRET </label>
+        @Html.TextBoxFor(m => m.sanatci_ücret, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_ücret, "", new { @style = "color-red" })<br />
+        <br />
+        <label>ÖN GÖSTERİM LİNKİ</label>
+        @Html.TextBoxFor(m => m.sanatci_video, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_video, "", new { @style = "color-red" })<br />
+        <br />
+        <label>CİNSİYET </label>
+        @Html.TextBoxFor(m => m.sanatci_cinsiyet, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.sanatci_cinsiyet, "", new { @style = "color-red" })<br />
+        <br />
+        <label>FOTOĞRAF</label>
+        <img src="~/Content/images/@Session["resim"]" width="300" height="300" /> <br />
+    </div>
+        <div>
+            <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+        </div>
+}

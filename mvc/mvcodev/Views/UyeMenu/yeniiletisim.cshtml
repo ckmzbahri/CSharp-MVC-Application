@@ -1,0 +1,23 @@
+﻿@model mvcodev.Models.Data.iletisim
+@{
+    ViewBag.Title = "yeniiletisim";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+<form class="form-group " method="post">
+    <div>
+        <label> AD SOYAD</label>
+        <input type="text" class="form-control" name="ad" />
+        @Html.ValidationMessageFor(m => m.ad, "", new { @style = "color-red" })<br />
+        <label>MAİL ADRESİ</label>
+        <input type="text" class="form-control" name="mail" />
+        @Html.ValidationMessageFor(m => m.mail, "", new { @style = "color-red" })<br />
+        <label>KONU</label>
+        <input type="text" class="form-control" name="konu" />
+        @Html.ValidationMessageFor(m => m.konu, "", new { @style = "color-red" })<br />
+        <div style="margin-top:30px">
+            <button class="btn btn-info">MESAJ GÖNDER </button>
+        </div>
+    </div>
+</form>
+

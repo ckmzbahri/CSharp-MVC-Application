@@ -1,0 +1,35 @@
+﻿@model mvcodev.Models.Data.kullanici    
+@{
+    ViewBag.Title = "Yoneticigiris";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>YÖNETİCİ GİRİŞİ</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class="text-danger"})
+        <div class="form-group">
+            KULLANICI ADI
+            <div class="col-md-10">
+                @Html.EditorFor(m=>m.kullanici_girisadi,new { htmlAttibutes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.kullanici_girisadi,"", new { @class = "form-control" } )
+            </div>
+        </div>
+        <div class="form-group">
+            ŞİFRE
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.kullanici_girissifre, new { htmlAttibutes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(m => m.kullanici_girissifre, "", new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" >
+                <input  type="submit" value="GİRİŞ" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}

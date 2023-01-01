@@ -1,0 +1,41 @@
+﻿@model mvcodev.Models.Data.kullanici
+@{
+    ViewBag.Title = "gunceladmin";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+@using (Html.BeginForm("Guncelleadmin", "admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label>ADMİN ID </label>
+            @Html.TextBoxFor(m => m.kullanici_id,  new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.kullanici_id, "", new { @style = "color-red" })
+            </div>><br />
+            <br />
+            <label> ADI </label>
+            @Html.TextBoxFor(m => m.kullanici_adi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.kullanici_adi, "", new { @style = "color-red" })<br />
+            <br />
+            <label>SOYADI </label>
+            @Html.TextBoxFor(m => m.kullanici_soyadi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.kullanici_soyadi, "", new { @style = "color-red" })<br />
+            <br />
+            <label>KULLANICI ADI </label>
+            @Html.TextBoxFor(m => m.kullanici_girisadi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.kullanici_girisadi, "", new { @style = "color-red" })<br />
+            <br />
+            <label>ŞİFRE</label>
+            @Html.TextBoxFor(m => m.kullanici_girissifre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.kullanici_girissifre, "", new { @style = "color-red" })<br />
+            <br />
+            <label>ŞİFRE TEKRAR </label>
+            @*@Html.TextBoxFor(m => m.menu_fotograf, new { @class = "form-control" })*@
+            <input type="text" class="form-control" />
+        </div>
+    <div>
+        <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+    </div>
+}
+

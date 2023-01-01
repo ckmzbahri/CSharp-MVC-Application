@@ -1,0 +1,50 @@
+﻿@using mvcodev.Models.Data
+@model List<yemekler>
+@{
+    ViewBag.Title = "rezervasyonyap2";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+<div class="offers_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                    <span>Our Offers</span>
+
+                </div>
+            </div>
+        </div>
+        @foreach (var i in Model)
+        {
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <br />
+                        <div class="about_thumb">
+                            <img src="~/Content/images/@i.menu_fotograf" alt="">
+                        </div>
+                        <h3>
+                            @i.menu_adi
+
+                        </h3>
+
+                        <ul>
+                            <li>MENÜ İÇERİĞİ: @i.menu_icerik</li>
+                            <li>FİYAT: @i.menu_fiyat</li>
+
+                            <br />
+                        </ul>
+                        <a href="/UyeMenu/rzvtut/@i.menu_id" class="btn btn-primary">SEÇ</a>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+<a href="/UyeMenu/anasayfa/" class="btn btn-primary">İPTAL</a>
+<a href="/UyeMenu/rezervasyonyap1/" class="btn btn-primary">SANATÇI SEÇİMİNE GERİ DÖN</a>
+
+
+

@@ -1,0 +1,17 @@
+﻿@model mvcodev.Models.Data.hakkimizda
+@{
+    ViewBag.Title = "yenihakkimiz";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+
+<form class="form-group " method="post">
+    <div>
+        <label>METİN</label>
+        <input type="text" class="form-control" name="metin" />
+        @Html.ValidationMessageFor(m => m.metin, "", new { @style = "color-red" })
+        <div style="margin-top:30px">
+            <button class="btn btn-info">YENİ İÇERİK EKLE </button>
+        </div>
+    </div>
+</form>

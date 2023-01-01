@@ -1,0 +1,47 @@
+﻿@using mvcodev.Models.Data
+
+@{
+    ViewBag.Title = "catring";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+<div class="offers_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                    <h3>ŞEFLERİMİZDEN SİZLERE SUNULAN EŞSİZ LEZZETLER</h3>
+
+                </div>
+            </div>
+        </div>
+        @foreach (var i in Model)
+        {
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <br />
+                        <div class="about_thumb">
+                            <img src="~/Content/images/@i.menu_fotograf" alt="">
+                        </div>
+                        <h3>
+                            @i.menu_adi
+
+                        </h3>
+
+                        <ul>
+                            <li>İÇEİRK: @i.menu_icerik</li>
+                            <li>FİYAT: @i.menu_fiyat</li>
+
+                            <br />
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+
+

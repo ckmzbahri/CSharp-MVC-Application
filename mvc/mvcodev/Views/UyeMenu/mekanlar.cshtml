@@ -1,0 +1,46 @@
+﻿@using mvcodev.Models.Data
+@model List<mekan>
+@{
+    ViewBag.Title = "mekanlar";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+<div class="offers_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                   
+                    <h3>MEKANLARIMIZ</h3>
+                </div>
+            </div>
+        </div>
+        @foreach (var i in Model)
+        {
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <br />
+                        <div class="about_thumb">
+                            <img src="~/Content/images/@i.mekan_foto1" alt="">
+                        </div>
+                        <h3>
+                            @i.mekan_adi
+
+                        </h3>
+                        <ul>
+                            <li>MÜZİK TÜRÜ: @i.mekan_adres</li>
+                            <li>SANATÇININ YAŞI: @i.kapasite</li>
+                            <li>SANATÇININ ÜCRETİ: @i.mekan_ucret</li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+

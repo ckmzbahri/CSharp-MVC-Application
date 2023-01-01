@@ -1,0 +1,45 @@
+﻿@model mvcodev.Models.Data.mekan
+@{
+    ViewBag.Title = "guncelmekan";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+@using (Html.BeginForm("Guncellemekan", "admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label>MEKAN İD</label>
+            @Html.TextBoxFor(m => m.mekan_id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.mekan_id, "", new { @style = "color-red" })
+        </div><br />
+        <br />
+        <label>MEKANIN ADI </label>
+        @Html.TextBoxFor(m => m.mekan_adi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.mekan_adi, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MEKANIN ADRESİ </label>
+        @Html.TextBoxFor(m => m.mekan_adres, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.mekan_adres, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MEKAN FOTOĞRAFI </label>
+        <img src="~/Content/images/@Session["resim"]" width="300" height="300" /> <br />
+        <label>MEKAN FOTOĞRAFI </label>
+        <img src="~/Content/images/@Session["resim1"]" width="300" height="300" /> <br />
+        <br />
+        <label>MEKAN FOTOĞRAFI </label>
+        <img src="~/Content/images/@Session["resim2"]" width="300" height="300" /> <br />
+        <br />
+        <label> KAPASİTE </label>
+        @Html.TextBoxFor(m => m.kapasite, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.kapasite, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MEKAN ÜCRETİ </label>
+        @Html.TextBoxFor(m => m.mekan_ucret, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.mekan_ucret, "", new { @style = "color-red" })<br />
+    </div>
+        <div>
+            <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+        </div>
+}
+

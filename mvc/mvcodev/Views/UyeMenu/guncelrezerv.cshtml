@@ -1,0 +1,49 @@
+﻿@model mvcodev.Models.Data.rezervasyon
+@{
+    ViewBag.Title = "guncelrezerv";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+@using (Html.BeginForm("Guncellerezerv", "admin", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <label>MEKAN ADI </label>
+        @Html.TextBoxFor(m => m.sanatci_id, new { @class = "form-control" })
+        <br />
+        <label>MEKAN ADRESİ  </label>
+        @Html.TextBoxFor(m => m.sanatci_tc, new { @class = "form-control" })
+        <br />
+        <label>KAPASİTE </label>
+        @Html.TextBoxFor(m => m.sanatci_ad, new { @class = "form-control" })
+        <br />
+        <label>MEKAN ÜCRETİ</label>
+        @Html.TextBoxFor(m => m.sanatci_muzik, new { @class = "form-control" })
+        <br />
+        <label>SANATÇI AD</label>
+        @Html.TextBoxFor(m => m.sanatci_telefon, new { @class = "form-control" })
+        <br />
+        <label>TÜR </label>
+        @Html.TextBoxFor(m => m.sanatci_mail, new { @class = "form-control" })
+        <br />
+        <label>YAŞ </label>
+        @Html.TextBoxFor(m => m.sanatci_yas, new { @class = "form-control" })
+        <br />
+        <label>ÜCRET </label>
+        @Html.TextBoxFor(m => m.sanatci_ücret, new { @class = "form-control" })
+        <br />
+        <label>ÖN GÖSTERİM LİNKİ</label>
+        @Html.TextBoxFor(m => m.sanatci_video, new { @class = "form-control" })
+        <br />
+        <label>CİNSİYET </label>
+        @Html.TextBoxFor(m => m.sanatci_cinsiyet, new { @class = "form-control" })
+        <br />
+        <label>FOTOĞRAF</label>
+        @Html.TextBoxFor(m => m.sanatci_fotograf, new { @class = "form-control" })
+    </div>
+    <div>
+        <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+    </div>
+}
+
+

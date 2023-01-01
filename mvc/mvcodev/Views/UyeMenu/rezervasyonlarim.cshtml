@@ -1,0 +1,59 @@
+﻿
+@using mvcodev.Models.Data
+@model List<rezervasyon>
+@{
+    ViewBag.Title = "rezervasyonlarim";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+        <th> MEKAN ADI</th>
+        <th> MEKAN ADRESİ</th>
+        <th> KAPASİTE</th>
+        <th> MEKAN ÜCRET</th>
+        <th> SANATÇI ADI</th>
+        <th> SANAT TÜRÜ</th>
+        <th> SANATÇI YAŞ</th>
+        <th> SANATÇI ÜCRET</th>
+        <th> MENÜ ADI</th>
+        <th> MENÜ İÇERİĞİ</th>
+        <th> MENÜ FİYATI</th>
+        <th> TARİH</th>
+        <th> DAVETLİ SAYISI</th>
+        @*<th> NET FİYAT</th>*@
+        <th> SİL</th>
+    </tr>
+
+    <tbody>
+        @foreach (var rezer in Model)
+        {
+            if (Session["kullanici_id"].ToString() == rezer.kullanici_detay)
+            {
+            <tr>
+                <td>@rezer.mekan.mekan_adi</td>
+                <td>@rezer.mekan.mekan_adres</td>
+                <td>@rezer.mekan.kapasite</td>
+                <td>@rezer.mekan.mekan_ucret</td>
+                <td>@rezer.sanatcilar.sanatci_ad</td>
+                <td>@rezer.sanatcilar.sanatci_muzik</td>
+                <td>@rezer.sanatcilar.sanatci_yas</td>
+                <td>@rezer.sanatcilar.sanatci_ücret</td>
+                <td>@rezer.yemekler.menu_adi</td>
+                <td>@rezer.yemekler.menu_icerik</td>
+                <td>@rezer.yemekler.menu_fiyat</td>
+                <td>@rezer.tarih</td>
+                <td>@rezer.davetli</td>
+                @*<td>@rezer.toplam_fiyat</td>*@
+                
+                <td>
+                    <a href="/UyeMenu/rzvSIL/@rezer.id" class=" btn btn-danger">SİL</a>
+                    
+                </td>
+
+            </tr>
+            }
+        }
+    </tbody>
+</table>
+@*<a href="/UyeMenu/yenirezerv/" class="btn btn-primary">YENİ MENÜ EKLE</a>*@
+

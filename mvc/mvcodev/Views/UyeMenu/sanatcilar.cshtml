@@ -1,0 +1,47 @@
+﻿@using mvcodev.Models.Data
+@model List<sanatcilar>
+
+    @{
+        ViewBag.Title = "sanatcilar";
+        Layout = "~/Views/Shared/uyemenu.cshtml";
+    }
+
+    <div class="offers_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-100">
+                      
+                        <h3>SANATÇILARIMIZ</h3>
+                    </div>
+                </div>
+            </div>
+            @foreach (var i in Model)
+            {
+                <div class="row">
+                    <div class="col-xl-4 col-md-4">
+                        <div class="single_offers">
+                            <br />
+                            <div class="about_thumb">
+                                <img src="~/Content/images/@i.sanatci_fotograf" alt="">
+                            </div>
+                            <h3>
+                                @i.sanatci_ad
+
+                            </h3>
+                            <ul>
+                                <li>MÜZİK TÜRÜ: @i.sanatci_muzik</li>
+                                <li>SANATÇININ YAŞI: @i.sanatci_yas</li>
+                                <li>SANATÇININ ÜCRETİ: @i.sanatci_ücret</li>
+                                <li>CİNSİYET: @i.sanatci_cinsiyet</li>
+                                <li></li>
+                            </ul>
+
+                            <a href="@i.sanatci_video" target="_blank">Ön Gösterimi İzle</a>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>

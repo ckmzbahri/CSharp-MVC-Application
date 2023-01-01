@@ -1,0 +1,33 @@
+﻿@model mvcodev.Models.Data.kullanici
+@{
+    ViewBag.Title = "yenikullanici";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<form class="form-group " method="post">
+    <div>
+        <label>ADMİNİN ADI</label>
+        <input type="text" class="form-control" name="kullanici_adi" />
+        @Html.ValidationMessageFor(m => m.kullanici_adi, "", new { @style = "color-red" })
+        <label>ADMİNİN SOYADI</label>
+        <input type="text" class="form-control" name="kullanici_soyadi" />
+        @Html.ValidationMessageFor(m => m.kullanici_soyadi, "", new { @style = "color-red" })
+        <label>KULLANICI ADI</label>
+        <input type="text" class="form-control" name="kullanici_girisadi" />
+        @Html.ValidationMessageFor(m => m.kullanici_girisadi, "", new { @style = "color-red" })
+        <label>ŞİFRE</label>
+        <input type="text" class="form-control" name="kullanici_girissifre" />
+        @Html.ValidationMessageFor(m => m.kullanici_girissifre, "", new { @style = "color-red" })
+        <label>ŞİFRE TEKRAR</label>
+        <input type="text" class="form-control" />
+    
+      
+       
+     
+     
+        <div style="margin-top:30px">
+            <button class="btn btn-info">KULLANICI Ekle </button>
+        </div>
+    </div>
+</form>
+

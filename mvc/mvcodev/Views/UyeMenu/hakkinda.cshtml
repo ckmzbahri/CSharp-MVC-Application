@@ -1,0 +1,40 @@
+﻿@using mvcodev.Models.Data
+@{
+    ViewBag.Title = "hakkinda";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+<div class="offers_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                   <h3>HAKKIMIZDA</h3>
+
+                </div>
+            </div>
+        </div>
+        @foreach (var i in Model)
+        {
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <br />
+                        <div class="about_thumb">
+                            <img src="~/montana/img/offers/1.png" alt="">
+                        </div>
+                        <h3>
+                            @i.metin
+
+                        </h3>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+

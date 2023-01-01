@@ -1,0 +1,92 @@
+﻿@using mvcodev.Models.Data
+    @model List<mekan>
+
+    @{
+
+        ViewBag.Title = "rezervasyonyap";
+        Layout = "~/Views/Shared/uyemenu.cshtml";
+    }
+
+    @*<table class="table table-bordered">
+        <tr>
+            <th> MEKAN ADI</th>
+            <th> ADRES</th>
+            <th> KAPASİTE</th>
+            <th> MEKAN FOTOĞRAF</th>
+            <th> MEKAN FOTOĞRAF</th>
+            <th> MEKAN FOTOĞRAF</th>
+            <th> FİYAT</th>
+            <th> SEÇ</th>
+        </tr>
+
+        <tbody>
+            @foreach (var mekan in Model)
+            {
+                <tr>
+
+                    <td>@mekan.mekan_adi</td>
+                    <td>@mekan.mekan_adres</td>
+                    <td>@mekan.kapasite</td>
+                    <td>@mekan.mekan_foto1</td>
+                    <td>@mekan.mekan_foto2</td>
+                    <td>@mekan.mekan_foto3</td>
+                    <td>@mekan.mekan_ucret</td>
+                    <td>
+                        <a href="/Anasayfa/mekansec/@mekan.mekan_id" class=" btn btn-danger">SEÇ</a>
+                       
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
+<div class="offers_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-100">
+                    <span>Our Offers</span>
+                    <h3>Ongoing Offers</h3>
+                </div>
+            </div>
+        </div>
+        @foreach (var i in Model)
+        {
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_offers">
+                        <br />
+                        <div class="about_thumb">
+                            <img src="~/Content/images/@i.mekan_foto1" alt="">
+                        </div>
+                        <h3>
+                            @i.mekan_adi
+
+                        </h3>
+                        <ul>
+                            <li>ADRES: @i.mekan_adres</li>
+                            <li>KAPASİTE: @i.kapasite</li>
+                            <li>MEKAN ÜCRETİ: @i.mekan_ucret</li>
+
+
+                        </ul>
+                        <br />
+                        <a href="/UyeMenu/rezervasyonyap1/@i.mekan_id" class="btn btn-primary">SEÇ</a>
+
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+
+
+
+ 
+   

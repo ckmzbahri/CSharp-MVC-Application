@@ -1,0 +1,164 @@
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\ApplicationInsights.config
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\csc.exe
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\System.Collections.Immutable.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\vbc.exe
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\VBCSCompiler.exe
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\roslyn\VBCSCompiler.exe.config
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\mvcodev.dll.config
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\mvcodev.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\mvcodev.pdb
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Antlr3.Runtime.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\EntityFramework.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\EntityFramework.SqlServer.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.Web.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.WindowsServer.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.ApplicationInsights.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Google.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Web.Infrastructure.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Newtonsoft.Json.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Owin.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Helpers.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Mvc.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Optimization.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Razor.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Deployment.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Razor.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\WebGrease.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.Web.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AI.WindowsServer.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.ApplicationInsights.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Helpers.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Mvc.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Optimization.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.Razor.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Deployment.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Razor.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Antlr3.Runtime.pdb
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Newtonsoft.Json.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\EntityFramework.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\EntityFramework.SqlServer.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Google.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\obj\Debug\mvcodev.dll
+c:\users\ckmzb\documents\visual studio 2015\Projects\mvcodev\mvcodev\obj\Debug\mvcodev.pdb
+C:\Users\ckmzb\Documents\Visual Studio 2015\Projects\mvcodev\mvcodev\obj\Debug\mvcodev.csprojResolveAssemblyReference.cache
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\ApplicationInsights.config
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\csc.exe
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\System.Collections.Immutable.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\System.Reflection.Metadata.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\vbc.exe
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\VBCSCompiler.exe
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\roslyn\VBCSCompiler.exe.config
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\mvcodev.dll.config
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\mvcodev.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\mvcodev.pdb
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Antlr3.Runtime.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\EntityFramework.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\EntityFramework.SqlServer.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.Agent.Intercept.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.DependencyCollector.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.Web.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.WindowsServer.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.ApplicationInsights.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Core.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Cookies.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Facebook.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Google.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.OAuth.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Twitter.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Web.Infrastructure.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Newtonsoft.Json.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Owin.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Helpers.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Mvc.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Optimization.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Razor.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Deployment.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Razor.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\WebGrease.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.DependencyCollector.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.Web.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AI.WindowsServer.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.ApplicationInsights.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Helpers.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Mvc.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Optimization.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.Razor.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Deployment.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\System.Web.WebPages.Razor.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Antlr3.Runtime.pdb
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Newtonsoft.Json.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\EntityFramework.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\EntityFramework.SqlServer.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Core.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Facebook.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Cookies.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.OAuth.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Google.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.Twitter.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\obj\Debug\mvcodev.csprojResolveAssemblyReference.cache
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\obj\Debug\mvcodev.dll
+C:\bahrİ\3.sınıf\Projects\mvcodev\mvcodev\obj\Debug\mvcodev.pdb

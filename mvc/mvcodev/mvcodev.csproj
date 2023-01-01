@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24381C88-24D3-4E4C-AB66-6D0C6505C745}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mvcodev</RootNamespace>
+    <AssemblyName>mvcodev</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\adminController.cs" />
+    <Compile Include="Controllers\AnasayfaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UyeMenuController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Data\adminsayfalar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\duyurular.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\hakkimizda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\iletisim.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\kullanici.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\mekan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\requiredAttribute.cs" />
+    <Compile Include="Models\Data\resimler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\rezervasyon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\sanatcilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\sayfa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\uyebilgi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\uyesayfa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\yemekler.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Data\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Data\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="montana\197  Hotel  DOC\css\font-awesome.min.css" />
+    <Content Include="montana\197  Hotel  DOC\css\main.css" />
+    <Content Include="montana\197  Hotel  DOC\css\normalize.min.css" />
+    <Content Include="montana\197  Hotel  DOC\fonts\fontawesome-webfont.svg" />
+    <Content Include="montana\197  Hotel  DOC\img\logo.png" />
+    <Content Include="montana\197  Hotel  DOC\index.html" />
+    <Content Include="montana\197  Hotel  DOC\js\custom.js" />
+    <Content Include="montana\197  Hotel  DOC\js\jquery-1.11.0.min.js" />
+    <Content Include="montana\197  Hotel  DOC\js\jquery.nav.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCore.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="montana\197  Hotel  DOC\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="montana\about.html" />
+    <Content Include="montana\blog.html" />
+    <Content Include="montana\contact.html" />
+    <Content Include="montana\css\animate.css" />
+    <Content Include="montana\css\bootstrap.min.css" />
+    <Content Include="montana\css\flaticon.css" />
+    <Content Include="montana\css\font-awesome.min.css" />
+    <Content Include="montana\css\gijgo.css" />
+    <Content Include="montana\css\magnific-popup.css" />
+    <Content Include="montana\css\nice-select.css" />
+    <Content Include="montana\css\owl.carousel.min.css" />
+    <Content Include="montana\css\slicknav.css" />
+    <Content Include="montana\css\style.css" />
+    <Content Include="montana\css\theme-default.css" />
+    <Content Include="montana\css\themify-icons.css" />
+    <Content Include="montana\elements.html" />
+    <Content Include="montana\fonts\fa-brands-400.svg" />
+    <Content Include="montana\fonts\fa-regular-400.svg" />
+    <Content Include="montana\fonts\fa-solid-900.svg" />
+    <Content Include="montana\fonts\flaticon.css" />
+    <Content Include="montana\fonts\Flaticon.svg" />
+    <Content Include="montana\fonts\fontawesome-webfont.svg" />
+    <Content Include="montana\fonts\gijgo-material.svg" />
+    <Content Include="montana\fonts\themify.svg" />
+    <Content Include="montana\img\about\1.png" />
+    <Content Include="montana\img\about\2.png" />
+    <Content Include="montana\img\about\about_1.png" />
+    <Content Include="montana\img\about\about_2.png" />
+    <Content Include="montana\img\banner\about_banner.png" />
+    <Content Include="montana\img\banner\banner.png" />
+    <Content Include="montana\img\banner\banner2.png" />
+    <Content Include="montana\img\banner\bradcam.png" />
+    <Content Include="montana\img\banner\bradcam2.png" />
+    <Content Include="montana\img\banner\bradcam3.png" />
+    <Content Include="montana\img\blog\author.png" />
+    <Content Include="montana\img\blog\blog_1.png" />
+    <Content Include="montana\img\blog\blog_2.png" />
+    <Content Include="montana\img\blog\blog_3.png" />
+    <Content Include="montana\img\blog\blog_4.png" />
+    <Content Include="montana\img\blog\learn_about_bg.png" />
+    <Content Include="montana\img\blog\single_blog_1.png" />
+    <Content Include="montana\img\blog\single_blog_2.png" />
+    <Content Include="montana\img\blog\single_blog_3.png" />
+    <Content Include="montana\img\blog\single_blog_4.png" />
+    <Content Include="montana\img\blog\single_blog_5.png" />
+    <Content Include="montana\img\blog\slide_thumb_1.png" />
+    <Content Include="montana\img\comment\comment_1.png" />
+    <Content Include="montana\img\comment\comment_2.png" />
+    <Content Include="montana\img\comment\comment_3.png" />
+    <Content Include="montana\img\elements\a.jpg" />
+    <Content Include="montana\img\elements\a2.jpg" />
+    <Content Include="montana\img\elements\d.jpg" />
+    <Content Include="montana\img\elements\disabled-check.png" />
+    <Content Include="montana\img\elements\disabled-radio.png" />
+    <Content Include="montana\img\elements\f1.jpg" />
+    <Content Include="montana\img\elements\f2.jpg" />
+    <Content Include="montana\img\elements\f3.jpg" />
+    <Content Include="montana\img\elements\f4.jpg" />
+    <Content Include="montana\img\elements\f5.jpg" />
+    <Content Include="montana\img\elements\f6.jpg" />
+    <Content Include="montana\img\elements\f7.jpg" />
+    <Content Include="montana\img\elements\f8.jpg" />
+    <Content Include="montana\img\elements\g1.jpg" />
+    <Content Include="montana\img\elements\g2.jpg" />
+    <Content Include="montana\img\elements\g3.jpg" />
+    <Content Include="montana\img\elements\g4.jpg" />
+    <Content Include="montana\img\elements\g5.jpg" />
+    <Content Include="montana\img\elements\g6.jpg" />
+    <Content Include="montana\img\elements\g7.jpg" />
+    <Content Include="montana\img\elements\g8.jpg" />
+    <Content Include="montana\img\elements\primary-check.png" />
+    <Content Include="montana\img\elements\primary-radio.png" />
+    <Content Include="montana\img\elements\success-check.png" />
+    <Content Include="montana\img\elements\success-radio.png" />
+    <Content Include="montana\img\favicon.ico" />
+    <Content Include="montana\img\favicon.png" />
+    <Content Include="montana\img\footer-logo.png" />
+    <Content Include="montana\img\instragram\1.png" />
+    <Content Include="montana\img\instragram\2.png" />
+    <Content Include="montana\img\instragram\3.png" />
+    <Content Include="montana\img\instragram\4.png" />
+    <Content Include="montana\img\instragram\5.png" />
+    <Content Include="montana\img\logo.png" />
+    <Content Include="montana\img\offers\1.png" />
+    <Content Include="montana\img\offers\2.png" />
+    <Content Include="montana\img\offers\3.png" />
+    <Content Include="montana\img\post\next.png" />
+    <Content Include="montana\img\post\post_1.png" />
+    <Content Include="montana\img\post\post_10.png" />
+    <Content Include="montana\img\post\post_2.png" />
+    <Content Include="montana\img\post\post_3.png" />
+    <Content Include="montana\img\post\post_4.png" />
+    <Content Include="montana\img\post\post_5.png" />
+    <Content Include="montana\img\post\post_6.png" />
+    <Content Include="montana\img\post\post_7.png" />
+    <Content Include="montana\img\post\post_8.png" />
+    <Content Include="montana\img\post\post_9.png" />
+    <Content Include="montana\img\post\preview.png" />
+    <Content Include="montana\img\rooms\1.png" />
+    <Content Include="montana\img\rooms\2.png" />
+    <Content Include="montana\img\rooms\3.png" />
+    <Content Include="montana\img\rooms\4.png" />
+    <Content Include="montana\img\video\video.png" />
+    <Content Include="montana\index.html" />
+    <Content Include="montana\js\ajax-form.js" />
+    <Content Include="montana\js\bootstrap.min.js" />
+    <Content Include="montana\js\contact.js" />
+    <Content Include="montana\js\gijgo.min.js" />
+    <Content Include="montana\js\imagesloaded.pkgd.min.js" />
+    <Content Include="montana\js\isotope.pkgd.min.js" />
+    <Content Include="montana\js\jquery.ajaxchimp.min.js" />
+    <Content Include="montana\js\jquery.counterup.min.js" />
+    <Content Include="montana\js\jquery.form.js" />
+    <Content Include="montana\js\jquery.magnific-popup.min.js" />
+    <Content Include="montana\js\jquery.scrollUp.min.js" />
+    <Content Include="montana\js\jquery.slicknav.min.js" />
+    <Content Include="montana\js\jquery.validate.min.js" />
+    <Content Include="montana\js\mail-script.js" />
+    <Content Include="montana\js\main.js" />
+    <Content Include="montana\js\nice-select.min.js" />
+    <Content Include="montana\js\owl.carousel.min.js" />
+    <Content Include="montana\js\plugins.js" />
+    <Content Include="montana\js\popper.min.js" />
+    <Content Include="montana\js\scrollIt.js" />
+    <Content Include="montana\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="montana\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="montana\js\waypoints.min.js" />
+    <Content Include="montana\js\wow.min.js" />
+    <Content Include="montana\rooms.html" />
+    <Content Include="montana\single-blog.html" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="montana\197  Hotel  DOC\.vscode\settings.json" />
+    <Content Include="montana\197  Hotel  DOC\fonts\fontawesome-webfont.eot" />
+    <Content Include="montana\197  Hotel  DOC\fonts\fontawesome-webfont.ttf" />
+    <Content Include="montana\197  Hotel  DOC\fonts\fontawesome-webfont.woff" />
+    <Content Include="montana\197  Hotel  DOC\fonts\FontAwesome.otf" />
+    <Content Include="montana\contact_process.php" />
+    <Content Include="montana\css\style.map" />
+    <Content Include="montana\css\theme-default.map" />
+    <Content Include="montana\fonts\fa-brands-400.eot" />
+    <Content Include="montana\fonts\fa-brands-400.ttf" />
+    <Content Include="montana\fonts\fa-brands-400.woff" />
+    <Content Include="montana\fonts\fa-brands-400.woff2" />
+    <Content Include="montana\fonts\fa-regular-400.eot" />
+    <Content Include="montana\fonts\fa-regular-400.ttf" />
+    <Content Include="montana\fonts\fa-regular-400.woff" />
+    <Content Include="montana\fonts\fa-regular-400.woff2" />
+    <Content Include="montana\fonts\fa-solid-900.eot" />
+    <Content Include="montana\fonts\fa-solid-900.ttf" />
+    <Content Include="montana\fonts\fa-solid-900.woff" />
+    <Content Include="montana\fonts\fa-solid-900.woff2" />
+    <Content Include="montana\fonts\Flaticon.eot" />
+    <Content Include="montana\fonts\Flaticon.ttf" />
+    <Content Include="montana\fonts\Flaticon.woff" />
+    <Content Include="montana\fonts\Flaticon.woff2" />
+    <Content Include="montana\fonts\fontawesome-webfont.eot" />
+    <Content Include="montana\fonts\fontawesome-webfont.ttf" />
+    <Content Include="montana\fonts\fontawesome-webfont.woff" />
+    <Content Include="montana\fonts\fontawesome-webfont.woff2" />
+    <Content Include="montana\fonts\FontAwesome.otf" />
+    <Content Include="montana\fonts\gijgo-material.eot" />
+    <Content Include="montana\fonts\gijgo-material.ttf" />
+    <Content Include="montana\fonts\gijgo-material.woff" />
+    <Content Include="montana\fonts\themify.eot" />
+    <Content Include="montana\fonts\themify.ttf" />
+    <Content Include="montana\fonts\themify.woff" />
+    <Content Include="montana\scss\style.scss" />
+    <Content Include="montana\scss\theme-default.scss" />
+    <Content Include="montana\scss\_about.scss" />
+    <Content Include="montana\scss\_blog.scss" />
+    <Content Include="montana\scss\_blog_part.scss" />
+    <Content Include="montana\scss\_bradcam.scss" />
+    <Content Include="montana\scss\_btn.scss" />
+    <Content Include="montana\scss\_contact.scss" />
+    <Content Include="montana\scss\_elements.scss" />
+    <Content Include="montana\scss\_extend.scss" />
+    <Content Include="montana\scss\_footer.scss" />
+    <Content Include="montana\scss\_header.scss" />
+    <Content Include="montana\scss\_mixins.scss" />
+    <Content Include="montana\scss\_offers.scss" />
+    <Content Include="montana\scss\_responsive.scss" />
+    <Content Include="montana\scss\_section_title.scss" />
+    <Content Include="montana\scss\_slick-nav.scss" />
+    <Content Include="montana\scss\_slider.scss" />
+    <Content Include="montana\scss\_varriable.scss" />
+    <EntityDeploy Include="Models\Data\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Data\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Anasayfa\Index.cshtml" />
+    <Content Include="Views\Anasayfa\Hakkinda.cshtml" />
+    <Content Include="Views\Anasayfa\Mekanlar.cshtml" />
+    <Content Include="Views\Anasayfa\Sanatcilar.cshtml" />
+    <Content Include="Views\Anasayfa\Catring.cshtml" />
+    <Content Include="Views\Anasayfa\iletisim.cshtml" />
+    <Content Include="Views\Anasayfa\Giris.cshtml" />
+    <Content Include="Views\Shared\uyemenu.cshtml" />
+    <Content Include="Views\UyeMenu\hakkinda.cshtml" />
+    <Content Include="Views\UyeMenu\mekanlar.cshtml" />
+    <Content Include="Views\UyeMenu\sanatcilar.cshtml" />
+    <Content Include="Views\UyeMenu\catring.cshtml" />
+    <Content Include="Views\UyeMenu\rezervasyonyap.cshtml" />
+    <Content Include="Views\UyeMenu\rezervasyonlarim.cshtml" />
+    <Content Include="Views\UyeMenu\iletisim.cshtml" />
+    <Content Include="Views\UyeMenu\uyedetay.cshtml" />
+    <Content Include="Views\UyeMenu\anasayfa.cshtml" />
+    <Content Include="Views\Shared\admin.cshtml" />
+    <Content Include="Views\admin\anasayfa.cshtml" />
+    <Content Include="Views\admin\duyurular.cshtml" />
+    <Content Include="Views\admin\iletisim.cshtml" />
+    <Content Include="Views\admin\kullanici.cshtml" />
+    <Content Include="Views\admin\yemek.cshtml" />
+    <Content Include="Views\admin\mekan.cshtml" />
+    <Content Include="Views\admin\sanatcilar.cshtml" />
+    <Content Include="Views\Anasayfa\Yoneticigiris.cshtml" />
+    <Content Include="Views\admin\yeniduyuru.cshtml" />
+    <Content Include="Views\admin\yenisanatci.cshtml" />
+    <Content Include="Views\admin\yeniyemek.cshtml" />
+    <Content Include="Views\admin\yenimekan.cshtml" />
+    <Content Include="Views\admin\yenikullanici.cshtml" />
+    <Content Include="Views\UyeMenu\yeniiletisim.cshtml" />
+    <Content Include="Views\admin\yenihakkimiz.cshtml" />
+    <Content Include="Views\admin\guncelyemek.cshtml" />
+    <Content Include="Views\admin\guncelhak.cshtml" />
+    <Content Include="Views\admin\guncelduy.cshtml" />
+    <Content Include="Views\admin\gunceladmin.cshtml" />
+    <Content Include="Views\admin\guncelmekan.cshtml" />
+    <Content Include="Views\admin\guncelsanatci.cshtml" />
+    <Content Include="Views\UyeMenu\guncelrezerv.cshtml" />
+    <Content Include="Views\UyeMenu\rezervasyonyap1.cshtml" />
+    <Content Include="Views\UyeMenu\rezervasyonyap2.cshtml" />
+    <Content Include="Views\admin\cikis.cshtml" />
+    <Content Include="Views\UyeMenu\cikis.cshtml" />
+    <Content Include="Views\Anasayfa\yeniuye.cshtml" />
+    <Content Include="Views\Anasayfa\duyurular.cshtml" />
+    <Content Include="Views\UyeMenu\duyurular.cshtml" />
+    <Content Include="Views\UyeMenu\rzvtut.cshtml" />
+    <Content Include="Views\UyeMenu\gunceluye.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
+    <Folder Include="montana\HTML\" />
+    <Folder Include="montana\img\brand\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54144</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54144/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

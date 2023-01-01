@@ -1,0 +1,50 @@
+﻿@using mvcodev.Models.Data
+@model List<sanatcilar>
+@{
+
+    ViewBag.Title = "sanatcilar";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<table class="text-left table table-bordered">
+    <tr>
+        <th> SANATÇI İD</th>
+        <th> SANATÇI TC</th>
+        <th> SANATÇI AD</th>
+        <th> MÜZİK TÜRÜ</th>
+        <th> TELEFON</th>
+        <th> İLETİŞİM</th>
+        <th> YAŞ</th>
+        <th> ÜCRET</th>
+       
+        <th> CİNSİYET</th>
+      
+        <th> SİL/GÜNCELLE </th>
+       
+    </tr>
+
+    <tbody>
+        @foreach (var sanat in Model)
+        {
+            <tr>
+                <td>@sanat.sanatci_id</td>
+                <td>@sanat.sanatci_tc</td>
+                <td>@sanat.sanatci_ad</td>
+                <td>@sanat.sanatci_muzik</td>
+                <td>@sanat.sanatci_telefon</td>
+                <td>@sanat.sanatci_mail</td>
+                <td>@sanat.sanatci_yas</td>
+                <td>@sanat.sanatci_ücret</td>
+                
+              
+                <td>@sanat.sanatci_cinsiyet</td>
+               
+                <td>
+                    <a href="/admin/sanatSIL/@sanat.sanatci_id" class=" btn btn-danger">SİL</a>
+                    <a href="/admin/guncelsanatci/@sanat.sanatci_id" class=" btn btn-success">GÜNCELLE</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/admin/yenisanatci/" class="btn btn-primary">YENİ SANATÇI EKLE</a>

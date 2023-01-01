@@ -1,0 +1,43 @@
+﻿@using mvcodev.Models.Data
+@{
+    ViewBag.Title = "uyedetay";
+    Layout = "~/Views/Shared/uyemenu.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+       
+        <th> ADI</th>
+        <th> SOYADI</th>
+        <th> MAİL ADRESİ</th>
+        <th> CİNSİYET</th>
+        <th> KULLANICI ADI</th>
+        <th> ŞİFRE</th>
+        <th> SİL/GÜNCELLE </th>
+    </tr>
+
+    <tbody>
+        @foreach (var uye in Model)
+        {
+            if (int.Parse(Session["kullanici_id"].ToString()) == uye.üye_id)
+            {
+                <tr>
+                    
+                    <td>@uye.üye_adi</td>
+                    <td>@uye.üye_soyadi</td>
+                    <td>@uye.mail</td>
+                    <td>@uye.cinsiyet</td>
+                    <td>@uye.kullanici_adi</td>
+                    <td>@uye.sifre</td>
+                    <td>
+                        <a href="/UyeMenu/uyeSIL/@uye.üye_id" class=" btn btn-danger">SİL</a>
+                        <a href="/UyeMenu/gunceluye/@uye.üye_id" class=" btn btn-success">GÜNCELLE</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,37 @@
+﻿@using mvcodev.Models.Data
+@model List<yemekler>
+@{
+    ViewBag.Title = "yemek";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th> MENÜ İD</th>
+        <th> MENÜ ADI</th>
+        <th> MENÜ İÇERİĞİ</th>
+        <th> MENÜ FİYATI</th>
+        <th> MENÜ FOTOĞRAFI</th>
+        <th> SİL/GÜNCELLE</th>
+    </tr>
+
+<tbody>
+    @foreach (var mama in Model)
+    {
+        <tr>
+            <td>@mama.menu_id</td>
+            <td>@mama.menu_adi</td>
+            <td>@mama.menu_icerik</td>
+            <td>@mama.menu_fiyat</td>
+            <td>@mama.menu_fotograf</td>
+            <td>
+                <a href="/admin/yemekSIL/@mama.menu_id" class=" btn btn-danger">SİL</a>
+                <a href="/admin/guncelyemek/@mama.menu_id" class=" btn btn-success">GÜNCELLE</a>
+            </td>
+
+        </tr>
+    }
+</tbody>
+</table>
+<a href="/admin/yeniyemek/" class="btn btn-primary">YENİ MENÜ EKLE</a>
+

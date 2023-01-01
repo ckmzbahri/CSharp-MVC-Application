@@ -1,0 +1,36 @@
+﻿ @model mvcodev.Models.Data.yemekler
+@{
+    ViewBag.Title = "guncelyemek";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+
+@using (Html.BeginForm("Guncelleyemek", "admin", FormMethod.Post))
+{ 
+    <div class="form-group">
+        <br />
+        <div style="display:none">
+            <label>MENÜ ID </label>
+            @Html.TextBoxFor(m => m.menu_id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.menu_id, "", new { @style = "color-red" })
+        </div><br />
+        <br />
+        <label>MENÜ ADI </label>
+        @Html.TextBoxFor(m => m.menu_adi, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.menu_adi, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MENÜ İÇERİĞİ </label>
+        @Html.TextBoxFor(m => m.menu_icerik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.menu_icerik, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MENÜ FİYAT </label>
+        @Html.TextBoxFor(m => m.menu_fiyat, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.menu_fiyat, "", new { @style = "color-red" })<br />
+        <br />
+        <label>MENÜ FOTOĞRAFI </label>
+         <img src="~/Content/images/@Session["resim"]" width="300" height="300" /> <br />
+    </div>
+    <div>
+        <button class="btn btn-group-lg">GÜNCELLEMEYİ KAYDET</button>
+    </div>
+}
+

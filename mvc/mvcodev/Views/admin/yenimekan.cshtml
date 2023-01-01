@@ -1,0 +1,35 @@
+﻿@model mvcodev.Models.Data.mekan
+@{
+    ViewBag.Title = "yenimekan";
+    Layout = "~/Views/Shared/admin.cshtml";
+}
+ 
+<form class="form-group " action="/admin/yenimekan" enctype="multipart/form-data" method="post">
+    <div>
+        <label>MEKAN ADI</label>
+        <input type="text" class="form-control" name="mekan_adi" />
+        @Html.ValidationMessageFor(m => m.mekan_adi, "", new { @style = "color-red" })<br />
+        <label>MEKAN ADRESİ</label>
+        <input type="text" class="form-control" name="mekan_adres" />
+        @Html.ValidationMessageFor(m => m.mekan_adres, "", new { @style = "color-red" })<br />
+        <label>MEKAN KAPASİTESİ</label>
+        <input type="text" class="form-control" name="kapasite" />
+        @Html.ValidationMessageFor(m => m.kapasite, "", new { @style = "color-red" })<br />
+        <label>MEKAN FOTOĞRAFI</label>
+        <input type="file" name="uploadfile" id="uploadfile" /> <br />
+        <label>MEKAN FOTOĞRAFI</label>
+        <input type="file" name="uploadfile1" id="uploadfile1" /> <br />
+        <label>MEKAN FOTOĞRAFI</label>
+        <input type="file" name="uploadfile2" id="uploadfile2" /> <br />
+        <label>MEKAN ÜCRETİ</label>
+        <input type="text" class="form-control" name="mekan_ucret" />
+        @Html.ValidationMessageFor(m => m.mekan_ucret, "", new { @style = "color-red" })<br />
+      
+      
+      
+        <div style="margin-top:30px">
+            <button class="btn btn-info">MEKAN EKLE </button>
+        </div>
+    </div>
+</form>
+
